@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nazaret Orantes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(to bottom, #000428, #004e92);
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-around;
+            margin: 15px;
+        }
+
+        .content img {
+            max-width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .counterContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .counter {
+            font-family: 'Copperplate', 'Copperplate Gothic Light', sans-serif;
+            font-size: 1em;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .esperanzaLink {
+            display: block; 
+            text-align: left; 
+            margin-top: 20px; 
+            color: #fff;
+        }
+
+        .textCenter {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 400px) {
+            body {
+                font-size: 18px;
+            }
+        
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .counterContainer {
+                align-items: center;
+            }
+        
+            .esperanzaLink, .textCenter {
+                text-align: center;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1> NAZARET ORANTES</h1>
+    </header>
+    <div class="content">
+        <img src="foto.jpg" alt="Descripción de la imagen">
+        <div class="counterContainer">
+            <div id="counterYears" class="counter"></div>
+            <div id="counterMonths" class="counter"></div>
+            <div id="counterWeeks" class="counter"></div>
+            <div id="counterDays" class="counter"></div>
+            <div id="counterHours" class="counter"></div>
+            <div id="counterMinutes" class="counter"></div>
+            <p class="textCenter">Le deseamos un feliz aniversario de trabajo. Orgullos de tener una compañera de trabajo como usted en nuestro equipo que vino con su talento y compromiso desde el primer dia.</p>
+
+    </div>
+    <script>
+        var startDate = new Date("2016-09-19");
+        var now = new Date();
+
+        var diff = now - startDate; 
+
+        var years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
+        document.getElementById("counterYears").innerHTML = years + " años";
+
+        var months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
+        document.getElementById("counterMonths").innerHTML = months + " meses";
+
+        var weeks = Math.floor(diff / (1000 * 60 * 60 * 24 * 7));
+        document.getElementById("counterWeeks").innerHTML = weeks + " semanas";
+
+        var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        document.getElementById("counterDays").innerHTML = days + " días";
+
+        var hours = Math.floor(diff / (1000 * 60 * 60));
+        document.getElementById("counterHours").innerHTML = hours + " horas";
+
+        var minutes = Math.floor(diff / (1000 * 60));
+        document.getElementById("counterMinutes").innerHTML = minutes + " minutos";
+    </script>
+</body>
+</html>
