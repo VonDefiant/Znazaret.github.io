@@ -18,6 +18,18 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
+            display: flex;
+            align-items: center; /* Centra verticalmente el texto y el logotipo */
+        }
+
+        header img {
+            max-width: 100px; /* Ajusta el ancho máximo según tu preferencia */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        h1 {
+            margin: 0; /* Elimina el margen predeterminado del encabezado */
         }
 
         .content {
@@ -76,12 +88,12 @@
                 text-align: center;
             }
         }
-        
     </style>
 </head>
 <body>
     <header>
-        <h1> NAZARET ORANTES</h1>
+        <img src="logo.png" alt="Logo de Nazaret Orantes">
+        <h1>NAZARET ORANTES</h1>
     </header>
     <div class="content">
         <img src="foto.jpg" alt="Descripción de la imagen">
@@ -92,8 +104,8 @@
             <div id="counterDays" class="counter"></div>
             <div id="counterHours" class="counter"></div>
             <div id="counterMinutes" class="counter"></div>
-            <p class="textCenter">Felicidades por tus 7 años desempeñando tus labores con dedicación y éxito.</p>
-
+            <p class="textCenter">Felicidades por tus 7 años desempeñando tu labores.</p>
+        </div>
     </div>
     <script>
         var startDate = new Date("2016-09-18");
